@@ -1,0 +1,53 @@
+---
+title: "Visualiser l'urbanisation en Suisse"
+author: "Melinda Femminis"
+date: "11 mai 2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Création d'un graphique avec R
+
+### Mise en situation
+La Suisse va bientôt voter pour ou contre une initiative ayant pour but de réguler l'urbanisation du pays. Une association indépendante souhaite rédiger un livret d'informations apolitique et objectif sur l'évolution de l'urbanisation et nous demande de fournir un graphique sur ce thème. 
+
+### Questionnement et choix de l'indicateur
+Nous allons devoir produire un graphique qui permette aux lectrices et lecteurs de **mieux comprendre l'urbanisation en Suisse**. Le but est de présenter l'urbanisation en Suisse d'une manière *objective*, contrairement aux informations de certains partis politiques. Pour cela nous allonrs choisir un indicateur d'urbanisation ainsi qu'un indicateur démographique - car l'urbanisation est directement liée aux êtres humains. De plus, pour mieux comprendre le phénomène, on va représenter un évolution. 
+
+Toutes les personnes ayant le droit de vote au niveau fédéral sont le public-cible, ce qui est large. Il faudra donc produire un graphique simple à comprendre et facile à lire. 
+
+#### Les individus
+Comme la votation se fait au niveau fédéral, les cantons qui sont retenus comme individus. Choisir les communes représenterait trop d'individus à traiter et ne permettrait pas une visualisation claire de l'information car les données seraient trop nombreuses.
+
+#### L'indicateur
+Il existe plusieurs indicateurs pour mesurer le niveau d'urbanisation:
+
+- ***le m² urbanisé par seconde*** - le m² dont il est question ici comprend la surface d'habitat et d'infrastructures, dont les bâtiments mais aussi les espaces verts, jardins et parcs. Ce m² est donc varié. L'expression "*En Suisse, on bétonne 1m² par seconde*" est souvent utilisée dans les milieux politiques et de protection de la nature pour parler de l'urbanisation. C'est pourtant faux, car le m² n'inclut pas que du béton. Nous n'allons pas utiliser cet indicateur car il est déjà connu par une bonne partie de la population mais d'une manière erronée.
+- ***la surface imperméabilisée*** par canton prend en compte uniquement la surface bétonnée comme les routes et les bâtiments, ce qui règle le problème du m²/sec. Mais l'urbanisation, ce n'est pas que tu béton; cet indicateur est très restreint. 
+- ***la surface d'habitat et d'infrastructure par habitant*** est l'indicateur que nous allons utiliser. Il a l'avantage de prendre en compte l'évolution de la population en même temps qu'une mesure d'urbanisation. Le fait d'utiliser les termes *surface d'habitat et d'infrastructure* au lieu de m² permet aussi de mettre en avant la diversité des surfaces prises en compte et inclut les surfaces de transport, d'infrastructures spéciales, espaces verts et lieux de détente, aires industrielles et artisanales ainsi que les aires de bâtiments. 
+
+Nous allonrs prendre les donnéées disponibles les plus récentes, soit fin 2019 mais il manque 3 cantons: Glaris, St-Gall et les Grisons.
+
+#### But du graphique
+Le but général de ce graphique est d'informer sur l'évolution de l'urbanisation dans les différents cantons suisses afin de savoir si c'est quelque chose qu'il faut freiner à tout prix ou non. Après avoir lu ce graphique, il faudra donc qu'une personne puisse:
+
+1. Savoir si la surface de d'habitat et d'infrasctrucure par habitant a **augmenté** ou **diminué** depuis la période la plus ancienne (1979-1895) pour un canton donné
+1. Voir si l'évolution de la surface de d'habitat et d'infrastrucure par habitant **est la même pour tous les cantons ou non**
+1. Identifier le ou les cantons avec *l*a plus grande** surface d'habitat et d'infrastructures par habitant et celui ou ceux avec **la plus petite** durant la période la plus récente (2013-2018)
+
+Le graphique plotté sera un graphique en petits multiples par canton avec une ligne de tendance afin de maximiser la lisibilité, de pouvoir relever les différences régionales et de comparer les cantons entre eux. La ligne de tendance sera de couleur différente selon si l'évolution totale sur la période prise en compte -de 1979-85 à 2013-18- est négative ou positive pour une vue claire de l'évolution.
+
+### Après avoir lu le graphique
+
+Le graphique *"Évolution de la surface d'habitat et d'infrastructures par habitant"* atteint son but car il est possible de répondre aux questions définies ci-dessus. On comprend aussi que cette évolution est très différente d'un canton à l'autre et surtout que certains arrivent à faire baisser la surface d'habitat et d'infrastructure par habitant.   
+Il faudrait maintenant présenter l'évolution de la population pour chaque canton afin de comprendre plus en détail la raison de certaines évolution, soit en ajoutant une ligne de tendance pour chaque canton sur ce graphique ou en en faisant un second. Cela permettra d'apporter des explications à certaines évolution, par exemple de voir si l'évolution positive du Jura est due à l'augmentation de l'urbanisation ou à la diminution de la population.    
+On pourra aussi présenter les mêmes données au niveau Suisse afin de pouvoir comparer cela aux données de chaque canton.
+
+### Réserves
+
+Ce graphique informe d'une manière claire **les différences d'évolution entre cantons** ainsi que **la tendance générale de chacun**, mais il ne suffit pas à avoir une compréhension détaillée de la problématique de l'urbanisation en Suisse et ne permet pas de juger, sans se référer à d'autres sources, s'il faut freiner l'urbanisation ou non.  
+
+Quand au graphique en soi, en plus d'y ajouter le nombre d'habitants par canton, on pourrait aussi changer la couleur des lignes de tendances ici rose et cyan qui sont similaires au rouge (perception négative) et vert (percption positive) et peuvent donner à penser qu'une évolution est plus favorable qu'une autre. De plus, ces couleurs ne sont pas les meilleures à distinguer pour les personnes daltoniennes et les changer permettra une meilleure lisibilité du graphique pour tous-tes.
