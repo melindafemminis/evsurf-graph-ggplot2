@@ -1,4 +1,4 @@
-# Graph with R and ggplot2
+# Graphiques avec R et ggplot2
 
 Graphique en petits multiples de l'évolution de la surface d'habitat et d'infrastructure par habitant pour 23 cantons suisse pour la période allant de 1979-85 à 2013-18.  
 
@@ -10,7 +10,7 @@ Graphique en petits multiples de l'évolution de la surface d'habitat et d'infra
 - *graphique-pm.pdf* est le graphique
 
 ## Données
-Les données viennent de l'**Office fédéral de la statistique** suisse.  
+Les données viennent de l'[Office fédéral de la statistique suisse.](https://www.bfs.admin.ch/bfs/en/home.html)
 L'indicateur **surface d'habitat et d'infrastrcuture par habitant** est calculé à partir de 3 autres indicateurs: statistique de la superficie,  statistique de l’état annuel de la population et statistique de la population et des ménages STATPOP (dès 2011). La statistique de la surperficie prend plusieurs années à être mise à jours et c'est pour cela que l'indicateur utilisé pour ce projet n'est pas disponible annuellement. 
 
 ## Recréer le graphique
